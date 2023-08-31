@@ -30,8 +30,10 @@ function App() {
   ]);
 
   return (
+    <div className="parentdiv">
+      <div className="child">
     <div>
-      <h1 className="title">PLACES TO VISIT IN EUROPE</h1>
+      <h1 className="title">CITIES TO VISIT IN EUROPE</h1>
       <div className="cards">
         {cards.map((card, i) => (
           <div key={i} className="card">
@@ -43,6 +45,8 @@ function App() {
           </div>
         ))}
       </div>
+    </div>
+    </div>
     </div>
   );
 }
