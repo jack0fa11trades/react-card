@@ -8,45 +8,41 @@ import img4 from "./images/frame4.png";
 function App() {
   const [cards] = useState([
     {
-      title: "Card-1",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",
+      title: "PARIS",
+      text: "Since the 17th century, Paris has been one of the world's major centres of finance, diplomacy, commerce, culture, fashion, gastronomy and many areas.",
       image: img1,
     },
     {
-      title: "Card-2",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",
+      title: "LONDON",
+      text: "When exploring London, you will come across lots of excitement by chance, so try to take everything in rather than just rushing around to all of the major tourist haunts.",
       image: img2,
     },
     {
-      title: "Card-3",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",
+      title: "BARCELONA",
+      text: "Overlooking the Mediterranean Sea, and famous for Gaudi and other Art Nouveau architecture. Barcelona is one of Europe's trendiest cities.",
       image: img3,
     },
     {
-      title: "Card-4",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.",
+      title: "PRAGUE",
+      text: "Old-world charm meets modern vibrancy in Europe's capital of stunning architecture, with the iconic Charles Bridge and a captivating cultural scene.",
       image: img4,
     },
   ]);
 
   return (
     <div>
-      <section>
-        <div className="parent-div">
-          <div className="container">
-            <h1>Responsive Cards</h1>
-            <div className="cards">
-              {cards.map((card, i) => (
-                <div key={i} className="card">
-                  <img src={card.image} alt={`Image for ${card.title}`} />
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                </div>
-              ))}
+      <h1 className="title">PLACES TO VISIT IN EUROPE</h1>
+      <div className="cards">
+        {cards.map((card, i) => (
+          <div key={i} className="card">
+            <img src={card.image} alt={`Image for ${card.title}`} />
+            <div className="card-content">
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
     </div>
   );
 }
